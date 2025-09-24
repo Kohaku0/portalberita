@@ -1,0 +1,258 @@
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); 
+        body {
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+            font-family: 'poppins', sans-serif;
+        }
+
+        header {
+            background: #0077cc;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 14px;
+            font-weight: 500;
+            margin-top: 10px;
+        }
+
+        header .logo {
+            width: 100px;
+        }
+
+        nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #0077cc;
+      padding: 10px 20px;
+      color: white;
+      position: relative;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      margin-left: 20px;
+      margin-bottom: 10px;
+      font-weight: 500;
+    }
+
+    nav ul li .active{
+      color: #333;
+      font-weight: 600;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      transition: all 0.5s;
+      text-align: center;
+    }
+
+    nav ul li a:hover {
+      color: #333;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      width: 30px;
+    }
+
+    .menu-toggle span {
+      width: 100%;
+      height: 3px;
+      background: white;
+      margin: 5px 0;
+      transition: 0.4s;
+    }
+
+    .menu-toggle.active span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-toggle.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .menu-toggle.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(10.5px, -10.5px);
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 3fr 1fr;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .headline {
+      background: url('image/');
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+
+.card {
+  background: #fff;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.card img {
+   width: 100%;        
+  height: auto;      
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.card-content h3 {
+  margin-bottom: 1px;
+  color: black;
+}
+
+.card-content p {
+  color: black;
+  font-size: 13px;
+}
+
+
+.card:hover {
+  transform: scale(1.02);
+  cursor: pointer;
+}
+
+.card:hover h3 {
+  transition: color 0.4s;
+  color: #0077cc;
+}
+
+    .sidebar {
+      background: #fff;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      height: fit-content;
+    }
+
+    .sidebar h3 {
+      margin-bottom: 10px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar ul li {
+      margin-bottom: 8px;
+    }
+
+    .sidebar ul li a {
+      text-decoration: none;
+      color: #1a73e8;
+    }
+
+        footer {
+            text-align: center;
+            background: #0077cc;
+            color: white;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+        .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      width: 25px;
+      height: 3px;
+      background: white;
+      margin: 4px 0;
+      transition: 0.3s;
+    }
+    
+    img {
+      height: auto;
+      border-radius: 8px;
+    }
+
+    #datetime {
+  font-size: 14px;
+  color: #0077cc;
+  margin-top: 5px;
+}
+
+
+        @media (max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+
+      nav ul {
+        flex-direction: column;
+        background: #0077cc;
+        position: absolute;
+        top: 53px;
+        left: 0;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+      }
+
+      nav ul.active {
+        max-height: 300px; /* tinggi maksimal menu */
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+  .card img {
+    width: 100%;
+    height: auto;
+    margin-right: 15px;
+  }
+    }
+
+    @media(min-width: 769px) {
+  .card {
+    flex-direction: row-reverse; /* gambar di kanan */
+    align-items: center;
+  }
+
+   .card img {
+    width: 180px;
+    height: 120px;
+    margin-left: 15px;   /* jarak antara teks & gambar */
+    object-fit: cover;   /* tetap rapi */
+  }
+}

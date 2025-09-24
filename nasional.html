@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="s nasional.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <section class="beranda" id="beranda">
+    <header>
+        <a href="#" class="logo"><img src="image/logo smkn 1 jakarta.png" alt="logo" class="logo"></a>
+        <h1>Portal Berita Sederhana</h1>
+        <p>Informasi terkini dan terpercaya</p>
+    </header>
+    </section>
+
+    <nav>
+    <ul id="nav-links">
+      <li><a href="index.html#beranda" class="nav-link">Beranda</a></li>
+      <li><a href="index.html#nasional" class="nav-link">Nasional</a></li>
+      <li><a href="index.html#teknologi" class="nav-link">Teknologi</a></li>
+      <li><a href="index.html#olahraga" class="nav-link">Olahraga</a></li>
+      <li><a href="index.html#hiburan" class="nav-link">Hiburan</a></li>
+    </ul>
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    </nav>
+    <div class="main">
+      <h1>335 Siswa Diduga Keracunan MBG di Bangga, BGN Minta Maaf</h1>
+      <p class="tgl">Sabtu, 20 September 2025 21.01 WIB</p>
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/rh2aQ4UlPWc?si=ji-4Fu6DK3ZDHloC"
+        title="YouTube video"
+        frameborder="0"
+        allowfullscreen></iframe>
+      </div>
+      <div class="paragraf">
+        <p style="margin-top: 40px;"><b>Jakarta,</b><b class="cnn"> CNN Indonesia</b> -- Badan Gizi Nasional (BGN) menyampaikan permohonan maaf atas insiden keracunan massal yang diduga terjadi akibat konsumsi Makan Bergizi Gratis (MBG) di Kabupaten Banggai Kepulauan, Sulawesi Tengah. Insiden tersebut menyebabkan ratusan siswa harus menjalani perawatan medis.</p>
+        <p>Sebagai bentuk tanggung jawab, BGN telah mengirimkan tim langsung ke lokasi sejak Jumat (19/9) untuk memastikan penanganan berjalan maksimal.</p>
+        <p>"Kami sangat prihatin atas kejadian ini dan turut berempati kepada seluruh pasien serta keluarga yang terdampak. BGN bersama seluruh pihak terkait terus bekerja keras memastikan penanganan kesehatan terbaik serta melakukan langkah investigasi menyeluruh atas insiden ini," ujar Kepala Biro Hukum dan Humas BGN Khairul Hidayati, dalam keterangan tertulisnya, Sabtu (20/9).</p>
+        <p>Direktur RSUD Trikora Feldy Deki menyampaikan bahwa sejak kasus pertama terdeteksi pada Rabu (17/9), total 335 pasien telah ditangani. Dari jumlah tersebut, 301 pasien telah pulih dan dipulangkan, sementara 34 lainnya masih menjalani perawatan akibat gejala seperti sesak napas, kram otot dada, tangan, dan kaki.</p>
+        <p>"Mengenai kondisi tersebut, pihak rumah sakit telah memberikan penanganan maksimal dengan memberikan obat serta penanganan medis lainnya sesuai dengan gejala yang dialami masing-masing korban," jelas Feldy.</p>
+        <p>Untuk memperkuat layanan medis, RSUD Trikora mendapatkan tambahan dukungan dari RSUP dr. Wahidin Sudirohusodo, Makassar. Sebanyak empat dokter spesialis dan tiga perawat tiba di Salakan pada Sabtu pagi untuk membantu proses pemulihan pasien.</p>
+        <p>"Dukungan ini tentunya sangat penting dan bernilai tinggi bagi kami, keluarga pasien, dan pasien itu sendiri, terutama dalam meningkatkan sisi psikologis," ujarnya.</p>
+        <h2 style="margin-top: 40px;">Kondisi pasien stabil</h2>
+        <p>Perwakilan tim medis Kementerian Kesehatan dari RSUP dr. Wahidin, Rusmin, memastikan bahwa kondisi seluruh pasien yang masih dirawat dalam keadaan stabil.</p>
+        <p>"Alhamdulillah keadaannya stabil, tidak mengancam jiwa. Alhamdulillah artinya anak-anak ini dalam proses recovery," kata Rusmin.</p>
+        <p>Ia juga menegaskan bahwa hasil pemeriksaan tidak menunjukkan tanda-tanda kerusakan saraf atau gejala berat lainnya yang sebelumnya sempat dikhawatirkan publik.</p>
+        <p>"Karena dari hasil pemeriksaan feses dan anamnesis tidak ada pemeriksaan yang mengarah ke kerusakan saraf yang dicurigai mengakibatkan kejang. Dan itu bukan tanda-tanda yang kita khawatirkan seperti khalayak ramai asumsikan," jelasnya.</p>
+        <p>BGN menegaskan fokus utamanya saat ini adalah penanganan korban, dengan koordinasi intensif bersama Kementerian Kesehatan, Badan Komunikasi Pemerintah, TNI, TNI AU, Polri, dan pemerintah daerah.</p>
+        <p>Secara paralel, BGN juga tengah bekerja sama dengan kepolisian untuk menginvestigasi operasionalisasi SPPG yang diduga berkaitan dengan insiden keamanan pangan ini. Hasil audit dan investigasi tersebut dijanjikan akan disampaikan secara terbuka kepada masyarakat.</p>
+        <img src="image/infografis-data-keracunan-mbg-sejak-awal-digelar-1758337774493.jpeg" alt="">
+      </div>
+    </div>
+
+    <footer>
+        &copy; 2025 Portal Berita Sederhana | Putra Andriansyah
+    </footer>
+
+    <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+    const links = document.querySelectorAll('.nav-link');
+
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      navLinks.classList.toggle('active');
+    });
+
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        menuToggle.classList.remove('active');
+        navLinks.classList.remove('active');
+      });
+    });
+
+    const sections = document.querySelectorAll("section");
+    const options = { threshold: 0.6 };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          links.forEach(link => {
+            link.classList.remove("active");
+            if (link.getAttribute("href").substring(1) === entry.target.id) {
+              link.classList.add("active");
+            }
+          });
+        }
+      });
+    }, options);
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+
+  </script>
+</body>
+</html>

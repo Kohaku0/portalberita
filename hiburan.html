@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="s nasional2.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <section class="beranda" id="beranda">
+    <header>
+        <a href="#" class="logo"><img src="image/logo smkn 1 jakarta.png" alt="logo" class="logo"></a>
+        <h1>Portal Berita Sederhana</h1>
+        <p>Informasi terkini dan terpercaya</p>
+    </header>
+    </section>
+
+    <nav>
+    <ul id="nav-links">
+      <li><a href="index.html#beranda" class="nav-link">Beranda</a></li>
+      <li><a href="index.html#nasional" class="nav-link">Nasional</a></li>
+      <li><a href="index.html#teknologi" class="nav-link">Teknologi</a></li>
+      <li><a href="index.html#olahraga" class="nav-link">Olahraga</a></li>
+      <li><a href="index.html#hiburan" class="nav-link">Hiburan</a></li>
+    </ul>
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    </nav>
+
+    <div class="main">
+      <h1>D4vd Batalkan Sisa Tur AS Imbas Penyelidikan Mayat di Bagasi Mobil</h1>
+      <p class="tgl">Sabtu, 20 September 2025 16.30 WIB</p>
+      <img src="image/d4vd.jpeg" alt="img">
+      <div class="paragraf">
+<article class="berita">
+  <p style="margin-top: 40px;"><b>Jakarta,</b><b class="cnn"> CNN Indonesia</b> -- Penyanyi D4vd telah membatalkan sisa jadwal tur AS di tengah penyelidikan atas penemuan mayat di bagasi mobil yang terdaftar atas namanya.</p>
+
+  <p>Penyanyi tersebut masih memiliki jadwal tur di Los Angeles pada Sabtu (20/9) serta penampilan di Museum Grammy L.A pada 24 September. Jadwal tersebut kini tiba-tiba telah hilang dihapus dari web tempat pertunjukan.</p>
+
+  <p>Variety pada Jumat (19/9) memberitakan jadwal itu sudah tak lagi ditemukan sejak Kamis (18/9) seiring dengan meningkatnya penyelidikan.</p>
+
+  <p>Tiket untuk konser pada Jumat malam (19/9) waktu setempat di San Francisco masih dijual hingga Jumat pagi, meskipun tampaknya konser tersebut kemungkinan besar tidak akan terlaksana.</p>
+
+  <p>Tiket untuk tur Eropa D4vd yang dijadwalkan dimulai di Norwegia pada 1 Oktober juga masih dijual.</p>
+
+  <p>Namun, TMZ melaporkan bahwa tim penyanyi tersebut telah memutuskan untuk membatalkan semua jadwal. Konser hari Rabu di Seattle dibatalkan awal pekan ini.</p>
+
+  <p>Petugas Departemen Kepolisian Los Angeles sebelumnya mendapat laporan bahwa di tempat derek Hollywood pada 8 September untuk menyelidiki bau busuk yang berasal dari satu mobil.</p>
+
+  <p>Mobil tersebut dilaporkan telah berada di tempat derek tersebut beberapa hari. Polisi kemudian menemukan sesosok mayat dalam tas di bagasi depan mobil Tesla yang terdaftar di sebuah alamat di Hempstead, Texas.</p>
+
+  <p>Mobil yang tidak pernah dilaporkan hilang atau dicuri itu ternyata terdaftar dimiliki David Anthony Burke, nama asli penyanyi D4vd.</p>
+
+  <p>Jenazah yang ditemukan di dalam mobil diidentifikasi seorang remaja bernama Celeste Rivas yang sudah dilaporkan hilang sejak April 2024.</p>
+
+  <p>Menurut kantor Pemeriksa Medis Wilayah Los Angeles, Rivas dilaporkan hilang pada 5 April 2024, dari Lake Elsinore, California.</p>
+
+  <p>Beberapa hari setelah penemuan tersebut, foto-foto yang belum dikonfirmasi telah muncul di internet yang memperlihatkan D4vd bersama korban di masa lalu. Beredar pula foto matching tattoo D4vd dan Rivas.</p>
+
+  <p>The New York Times mengonfirmasi bahwa kendaraan tersebut tidak dilaporkan dicuri. NBC News mengonfirmasi bahwa Burke "bekerja sama sepenuhnya" dengan pihak berwenang setelah mengetahui keterlibatannya, yang masih dalam penyelidikan.</p>
+
+  <p>Sejak penemuan mayat dalam bagasi mobilnya beredar pekan lalu, D4vd sedang tur Amerika. Ia masih sempat tampil di Minneapolis tanpa membahas situasi tersebut, tetapi kemudian membatalkan pertunjukan pada 17 September di Seattle.</p>
+
+  <p>Musisi ini terkenal lewat lagu <em>Here With Me</em> dan <em>Romantic Homicide</em> yang masing-masing telah diputar lebih dari satu miliar kali di Spotify.</p>
+</article>
+
+      </div>
+    </div>
+
+    <footer>
+        &copy; 2025 Portal Berita Sederhana | Putra Andriansyah
+    </footer>
+
+    <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+    const links = document.querySelectorAll('.nav-link');
+
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      navLinks.classList.toggle('active');
+    });
+
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        menuToggle.classList.remove('active');
+        navLinks.classList.remove('active');
+      });
+    });
+
+    const sections = document.querySelectorAll("section");
+    const options = { threshold: 0.6 };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          links.forEach(link => {
+            link.classList.remove("active");
+            if (link.getAttribute("href").substring(1) === entry.target.id) {
+              link.classList.add("active");
+            }
+          });
+        }
+      });
+    }, options);
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+
+  </script>
+</body>
+</html>

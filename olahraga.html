@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="s nasional2.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <section class="beranda" id="beranda">
+    <header>
+        <a href="#" class="logo"><img src="image/logo smkn 1 jakarta.png" alt="logo" class="logo"></a>
+        <h1>Portal Berita Sederhana</h1>
+        <p>Informasi terkini dan terpercaya</p>
+    </header>
+    </section>
+
+    <nav>
+    <ul id="nav-links">
+      <li><a href="index.html" class="nav-link">Beranda</a></li>
+      <li><a href="#nasional" class="nav-link">Nasional</a></li>
+      <li><a href="#teknologi" class="nav-link">Teknologi</a></li>
+      <li><a href="#olahraga" class="nav-link">Olahraga</a></li>
+      <li><a href="#hiburan" class="nav-link">Hiburan</a></li>
+    </ul>
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    </nav>
+
+    <div class="main">
+      <h1>Hasil F1 GP Azerbaijan: Max Verstappen Juara, Oscar Piastri Kecelakaan</h1>
+      <p class="tgl">Minggu, 21 September 2025 21.31 WIB</p>
+      <img src="image/max-verstappen-1757270897726_43.jpeg" alt="img">
+      <div class="paragraf">
+        <article>
+  <p>Jakarta, CNN Indonesia -- Max Verstappen berhasil memenangi F1 GP Azerbaijan 2025 mengalahkan pemuncak klasemen Oscar Piastri yang mengalami kecelakaan, Minggu (21/9).</p>
+
+  <p>Piastri, yang jarang melakukan kesalahan musim ini, mengalami start buruk di Baku. Ia menabrak pembatas di Tikungan 6 melengkapi akhir pekan yang buruk bagi pembalap McLaren tersebut.</p>
+
+  <p>Kecelakaan yang dialami Piastri membuat Verstappen melaju dengan nyaman tanpa tekanan untuk meraih kemenangan kedua berturut-turut. Total Verstappen sudah mengoleksi empat kemenangan di F1 2025.</p>
+
+  <p>"Akhir pekan yang luar biasa bagi kami. Monza sudah luar biasa, tetapi bagi kami meraih kemenangan di sini sungguh fantastis," kata Verstappen.</p>
+
+  <p>"Mobil kami bekerja sangat baik di kedua kompon. Udara bersih selalu tersedia, jadi Anda bisa merawat ban. Tidak pernah mudah balapan di sini di mana cuaca sangat berangin jadi mobil banyak bergerak. Saya sangat senang dengan performa ini," ujar Verstappen menambahkan.</p>
+
+  <p>Pembalap Mercedes George Russel sukses meraih posisi kedua, sementara Carlos Sainz melengkapi podium untuk Williams.</p>
+
+  <p>Sedangkan pembalap Mercedes lainnya, Kimi Antonelli, menempati posisi keempat di depan Liam Lawson yang finis kelima untuk Racing Bulls.</p>
+
+  <p>Adapun pembalap Ferrari Lewis Hamilton hanya mampu finis ke depalan di depan rekan setimnya Charles Leclerc.</p>
+
+  <h2>Hasil F1 GP Azerbaijan 2025</h2>
+  <ul>
+    <li>1. Max Verstappen (Red Bull)</li>
+    <li>2. George Russel (Mercedes)</li>
+    <li>3. Carlos Sainz (Williams)</li>
+    <li>4. Kimi Antonelli (Mercedes)</li>
+    <li>5. Liam Lawson (Racing Bulls)</li>
+    <li>6. Yuki Tsunoda (Red Bull)</li>
+    <li>7. Lando Norris (McLaren)</li>
+    <li>8. Lewis Hamilton (Ferrari)</li>
+    <li>9. Charles Leclerc (Ferrari)</li>
+    <li>10. Isack Hadjar (Racing Bulls)</li>
+  </ul>
+  <img src="image/hasil f1.jpg" alt="">
+</article>
+
+      </div>
+    </div>
+
+    <footer>
+        &copy; 2025 Portal Berita Sederhana | Putra Andriansyah
+    </footer>
+
+    <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+    const links = document.querySelectorAll('.nav-link');
+
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      navLinks.classList.toggle('active');
+    });
+
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        menuToggle.classList.remove('active');
+        navLinks.classList.remove('active');
+      });
+    });
+
+    const sections = document.querySelectorAll("section");
+    const options = { threshold: 0.6 };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          links.forEach(link => {
+            link.classList.remove("active");
+            if (link.getAttribute("href").substring(1) === entry.target.id) {
+              link.classList.add("active");
+            }
+          });
+        }
+      });
+    }, options);
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+
+  </script>
+</body>
+</html>

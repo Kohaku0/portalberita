@@ -1,0 +1,190 @@
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); 
+        body {
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+            font-family: 'poppins', sans-serif;
+        }
+
+        header {
+            background: #0077cc;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 14px;
+            font-weight: 500;
+            margin-top: 10px;
+        }
+
+        header .logo {
+            width: 100px;
+        }
+
+        nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #0077cc;
+      padding: 10px 20px;
+      color: white;
+      position: relative;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      margin-left: 20px;
+      margin-bottom: 10px;
+      font-weight: 500;
+    }
+
+    nav ul li .active{
+      color: #333;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      transition: all 0.5s;
+      text-align: center;
+    }
+
+    nav ul li a:hover {
+      color: #333;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      width: 30px;
+    }
+
+    .menu-toggle span {
+      width: 100%;
+      height: 3px;
+      background: white;
+      margin: 5px 0;
+      transition: 0.4s;
+    }
+
+    .menu-toggle.active span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-toggle.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .menu-toggle.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(10.5px, -10.5px);
+    }
+
+        footer {
+            text-align: center;
+            background: #0077cc;
+            color: white;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+        .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      width: 25px;
+      height: 3px;
+      background: white;
+      margin: 4px 0;
+      transition: 0.3s;
+    }
+    
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .main {
+      max-width: 1100px;
+      margin: 20px auto;
+      padding: 30px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .main img {
+      width: 700px;
+      display: block;
+      margin: 20px auto;
+      justify-items: center;
+    }
+
+    h1{
+      margin-bottom: 1px;
+    }
+
+    .tgl{
+      margin-top: 1px;
+      margin-bottom: 25px;
+      color: #6b6b6b;
+    }
+
+    .paragraf p {
+      text-align: justify;
+    }
+    .cnn {
+      color: red;
+    }
+
+    .desc {
+      color: #6b6b6b;
+      font-size: 13px;
+      margin: 1px;
+    }
+
+        @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        background: #0077cc;
+        position: absolute;
+        top: 53px;
+        left: 0;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+      }
+
+      nav ul.active {
+        max-height: 300px; /* tinggi maksimal menu */
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      .main img {
+        width: 100%;
+      }
+    }

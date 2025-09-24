@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="s nasional2.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <section class="beranda" id="beranda">
+    <header>
+        <a href="#" class="logo"><img src="image/logo smkn 1 jakarta.png" alt="logo" class="logo"></a>
+        <h1>Portal Berita Sederhana</h1>
+        <p>Informasi terkini dan terpercaya</p>
+    </header>
+    </section>
+
+    <nav>
+    <ul id="nav-links">
+      <li><a href="index.html#beranda" class="nav-link">Beranda</a></li>
+      <li><a href="index.html#nasional" class="nav-link">Nasional</a></li>
+      <li><a href="index.html#teknologi" class="nav-link">Teknologi</a></li>
+      <li><a href="index.html#olahraga" class="nav-link">Olahraga</a></li>
+      <li><a href="index.html#hiburan" class="nav-link">Hiburan</a></li>
+    </ul>
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    </nav>
+
+    <div class="main">
+      <h1>Jorge Lorenzo Blak-blakan Rossi Tendang Marquez di Malaysia</h1>
+      <p class="tgl">Minggu, 21 September 2025 15.00 WIB</p>
+      <img src="image/e4871ae4-fc04-4f30-bada-14abab8714f9_43.jpeg" alt="img">
+      <div class="paragraf">
+        <article>
+  <p style="margin-top: 40px;"><b>Jakarta,</b><b class="cnn"> CNN Indonesia</b> -- Jorge Lorenzo mengungkit kembali ingatan soal perseteruan Valentino Rossi dengan Marc Marquez yang terjadi sepuluh tahun lalu di MotoGP 2025. Ketika itu Rossi dan Lorenzo terlibat dalam persaingan menjadi juara pada akhir musim dan MotoGP Malaysia merupakan seri kedua terakhir sebelum MotoGP Valencia.</p>
+
+  <p>Dalam balapan di Sirkuit Sepang, Rossi dan Marquez terlibat insiden kontroversial. Dalam pertarungan perebutan posisi ketiga, keduanya terlibat dalam aksi saling salip.</p>
+
+  <p>Saat balapan memasuki lap kedua terakhir, Rossi tampak menendang Marquez di tikungan 14.</p>
+
+  <p>Rossi kemudian mendapat hukuman pengurangan poin dan harus start dari posisi paling belakang pada seri terakhir di Valencia.</p>
+
+  <p>The Doctor yang bisa menyelesaikan balapan di posisi keempat hanya bisa menempati posisi kedua di klasemen. Sedangkan Lorenzo yang finis pertama di MotoGP Valencia mengunci gelar juara dunia.</p>
+
+  <p>Dalam dokumenter terbaru DAZN, Lorenzo mengungkap insiden tendangan Rossi ke Marquez di MotoGP Malaysia.</p>
+
+  <p>"Saya terkejut, karena tidak umum ada seorang pembalap mendorong pembalap lain sampai ke luar lintasan secara jelas. Lalu ada gestur yang bisa dilihat dengan lututnya, entah itu tendangan atau bukan. Tapi bagaimana pun, lutunya bergerak, mereka bersentuhan, dan Marquez terjatuh," kata Lorenzo dilansir dari Crash.</p>
+
+  <p>Pemilik tiga gelar juara dunia MotoGP itu menilai Rossi seharusnya didiskualifikasi dari balapan, tetapi dia kini juga mengaku dirinya bertindak layaknya pemain sepak bola dengan melebih-lebihkan emosinya.</p>
+
+  <p>Saat podium MotoGP Malaysia 2015, Lorenzo menjadi runner up dan Rossi menduduki peringkat ketiga. Sementara Dani Lorenzo finis terdepan. Di atas podium Lorenzo sempat menampilkan gestur jempol ke bawah untuk Rossi yang kemudian mendapat reaksi keras dari fans pembalap asal Italia itu.</p>
+
+  <p>"Saya tidak ingat, saya meninggalkan podium lebih awal. Saya bertindak seperti pemain bola, yang sebisa mungkin melebih-lebihkan dengan gestur untuk mempertahankan posisi."</p>
+
+  <p>"Saya kesal karena Rossi tidak diberi bendera hitam yang akan mengurangi poinnya karena itu akan menempatkan saya di posisi terdepan [di klasemen]," bebernya.</p>
+
+  <p>Lorenzo pun berkesimpulan menilai Rossi dengan jelas memiliki niat jahat kepada Marquez, namun ia juga merasa rekan senegaranya itu melakukan tindakan tidak benar kepada pembalap yang identik dengan nomor 46.</p>
+
+  <p>"Memang benar Marquez mencoba mendorongnya hingga terjatuh dan memperlambat lajunya, tetapi reaksi Valentino di tikungan itu jelas. Dia tidak hanya mencoba menyalipnya; dia mencoba mendorongnya ke luar lintasan, atau setidaknya keluar dari garis finis," tukas Lorenzo.</p>
+</article>
+
+      </div>
+    </div>
+
+    <footer>
+        &copy; 2025 Portal Berita Sederhana | Putra Andriansyah
+    </footer>
+
+    <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+    const links = document.querySelectorAll('.nav-link');
+
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      navLinks.classList.toggle('active');
+    });
+
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        menuToggle.classList.remove('active');
+        navLinks.classList.remove('active');
+      });
+    });
+
+    const sections = document.querySelectorAll("section");
+    const options = { threshold: 0.6 };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          links.forEach(link => {
+            link.classList.remove("active");
+            if (link.getAttribute("href").substring(1) === entry.target.id) {
+              link.classList.add("active");
+            }
+          });
+        }
+      });
+    }, options);
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+
+  </script>
+</body>
+</html>
