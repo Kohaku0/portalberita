@@ -155,11 +155,10 @@
     }
 
     .paragraf img {
+      width: 300px;
       display: block;
-      margin: 20px auto; /* atas-bawah 20px, kiri-kanan otomatis */
-      max-width: 400px;   /* biar responsif */
-      height: auto;
-      margin-top: 50px;
+      margin: 20px auto;
+      justify-items: center;
     }
 
     /* Mobile responsive */
@@ -186,5 +185,8 @@
 
       .video-container {
         max-width: 100%; /* full di HP */
+      }
+      img {
+        width: 100%;
       }
     }
